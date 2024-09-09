@@ -1,6 +1,5 @@
 import React from "react";
-
-// Gestion de l'adresse
+// Address management component
 export default function Address({ states, register, errors }) {
   return (
     <div className="employee-address-form">
@@ -33,7 +32,7 @@ export default function Address({ states, register, errors }) {
           {...register("state", { required: "State is required" })}
           className="employee-address-form__select"
         >
-          <option value="">Sélectionnez un État</option>
+          <option value="">Select a State</option>
           {states.map((state) => (
             <option key={state.abbreviation} value={state.abbreviation}>
               {state.name}

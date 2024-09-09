@@ -1,14 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Form from "../../components/form/Form";
+import { Link } from "react-router-dom";
 
-export default function Index() {
+export default function Index({ setEmployees }) {
   return (
-    <section className="title">
-      <h1>HRnet</h1>
+    <>
+      <h1>Welcome to the Employee Management App</h1>
       <Link to="/employee">View Employee</Link>
-      <h2>Create employee</h2>
-      <Form />
-    </section>
+      <Form setEmployees={setEmployees} />
+    </>
   );
 }

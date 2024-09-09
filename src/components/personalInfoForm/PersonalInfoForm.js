@@ -1,5 +1,5 @@
 import React from "react";
-
+// PersonnalInfo management component
 export default function PersonalInfoForm({ register, errors }) {
   return (
     <div className="personal-info-form">

@@ -1,6 +1,5 @@
 import React from "react";
-
-// Gestion du sélecteur de département
+// Department management component
 export default function DepartmentSelect({ register, errors }) {
   return (
     <div className="department-select">

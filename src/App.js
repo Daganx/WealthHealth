@@ -1,15 +1,22 @@
-import "./index.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Index from "./pages/index/Index";
+import React, { useState } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import EmployeeList from "./pages/employeeList/EmployeeList";
+import Index from "./pages/index/Index";
 
 function App() {
+  const [employees, setEmployees] = useState([]);
+
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="/employee" element={<EmployeeList />} />
-      </Routes>
+      <section className="App">
+        <Routes>
+          <Route path="/" element={<Index setEmployees={setEmployees} />} />
+          <Route
+            path="/employee"
+            element={<EmployeeList employees={employees} />}
+          />
+        </Routes>
+      </section>
     </Router>
   );
 }
