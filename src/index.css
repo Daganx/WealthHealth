@@ -1,50 +1,164 @@
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
 }
+
+@font-face {
+    font-family: "Suse";
+    src: url(./assets/fonts/SUSE-VariableFont_wght.ttf);
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    margin: 0;
+    font-family: "Suse";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #dbdbd6;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.app {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.title {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.link-employee {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+    text-decoration: underline;
+}
+
+.link-employee:hover {
+    text-decoration: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.personal-info-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.personal-info-form__field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.employee-address-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.employee-adress-form__field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.employee-address-form__field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.department-select {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid white;
+    padding: 8px;
+    color: black;
+    border-radius: 5px;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+#state {
+    height: 32.5px;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+}
+
+#department {
+    height: 32.5px;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+}
+
+.employee-submit-button {
+    height: 40px;
+    margin-left: 32px;
+    margin-right: 32px;
+    margin-top: 32px;
+    border: 2px solid;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.error-message {
+    color: red;
+}
+
+.error {
+    color: red;
+}
+
+/* CSS Modal */
 .modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .modal-content {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
 }
 
 .modal-close-button {
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }

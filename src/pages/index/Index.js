@@ -1,13 +1,29 @@
-import React from "react";
-import Form from "../../components/form/Form";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Form from '../../components/form/Form';
 
-export default function Index({ setEmployees }) {
+function TitleSection() {
   return (
-    <>
-      <h1>Welcome to the Employee Management App</h1>
-      <Link to="/employee">View Employee</Link>
-      <Form setEmployees={setEmployees} />
-    </>
+      <section className="title-container">
+        <h1 className="title">HRnet</h1>
+      </section>
+  );
+}
+
+function ViewEmployeeLink() {
+  return (
+      <Link className="link-employee" to="/employee">
+        View Employee
+      </Link>
+  );
+}
+
+export default function IndexPage({ setEmployees }) {
+  return (
+      <>
+        <TitleSection />
+        <ViewEmployeeLink />
+        <Form setEmployees={setEmployees} />
+      </>
   );
 }

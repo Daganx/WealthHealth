@@ -3,48 +3,42 @@ import PersonalInfoForm from "../personalInfoForm/PersonalInfoForm";
 import Address from "../adressSelect/AdressSelect";
 import DepartmentSelect from "../departmentSelect/DepartmentSelect";
 import States from "../../data/states.json";
-import DepartmentData from "../../data/department.json"
-import Modal from "../modal/Modal";
+import DepartmentData from "../../data/department.json";
+import Modal from "@daganx/modal-package";
 import { useForm } from "react-hook-form";
 
-export default function Form({ setEmployees }) {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    reset,
-  } = useForm();
-  // State to manage modal visibility
+const FORM_CLASS_NAME = "employee-personal-info-form";
+const SUBMIT_BUTTON_CLASS_NAME = "employee-submit-button";
+
+const useModal = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  // Function to handle form submission
-  const onSubmit = (data) => {
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+  return { isModalOpen, openModal, closeModal };
+};
+
+export default function Form({ setEmployees }) {
+  const { register, handleSubmit, formState: { errors }, reset } = useForm();
+  const { isModalOpen, openModal, closeModal } = useModal();
+
+  const handleFormSubmit = (data) => {
     setEmployees((prevEmployees) => [...prevEmployees, data]);
     console.log("Employee saved: ", data);
     reset();
-    setIsModalOpen(true); // Open the modal
+    openModal();
   };
-  // Function to close the modal
-  const closeModal = () => setIsModalOpen(false);
 
   return (
-    <>
-      <form
-        className="employee-personal-info-form"
-        onSubmit={handleSubmit(onSubmit)}
-      >
-        {/* Personal info form component */}
-        <PersonalInfoForm register={register} errors={errors} />
-        {/* Address form component */}
-        <Address states={States} register={register} errors={errors} />
-        {/* Department selection component */}
-        <DepartmentSelect department={DepartmentData} register={register} errors={errors} />
-        {/* Submit button */}
-        <button type="submit" className="employee-submit-button">
-          Submit
-        </button>
-      </form>
-      {/* Modal component */}
-      <Modal isOpen={isModalOpen} onClose={closeModal} />
-    </>
+      <>
+        <form className={FORM_CLASS_NAME} onSubmit={handleSubmit(handleFormSubmit)}>
+          <PersonalInfoForm register={register} errors={errors} />
+          <Address states={States} register={register} errors={errors} />
+          <DepartmentSelect department={DepartmentData} register={register} errors={errors} />
+          <button type="submit" className={SUBMIT_BUTTON_CLASS_NAME}>
+            Submit
+          </button>
+        </form>
+        <Modal isOpen={isModalOpen} onClose={closeModal} />
+      </>
   );
 }
