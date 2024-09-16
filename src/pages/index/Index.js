@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import Form from '../../components/form/Form';
 
 function TitleSection() {
   return (
-      <section className="title-container">
+      <section className="title-container pacifico-regular">
         <h1 className="title">HRnet</h1>
       </section>
   );
@@ -18,12 +18,12 @@ function ViewEmployeeLink() {
   );
 }
 
-export default function IndexPage({ setEmployees }) {
+export default function IndexPage({setEmployees}) {
   return (
       <>
-        <TitleSection />
-        <ViewEmployeeLink />
-        <Form setEmployees={setEmployees} />
+        <TitleSection/>
+        <Form setEmployees={setEmployees}/>
+        <ViewEmployeeLink/>
       </>
   );
 }
