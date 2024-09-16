@@ -3,6 +3,7 @@ import EmployeeTable from "../../components/employeeTable/EmployeeTable";
 import {Link} from "react-router-dom";
 
 const NO_EMPLOYEES_MESSAGE = "No employees added yet.";
+const EMPLOYEE_LIST_CLASS_NAME = "employee-list-container"
 
 function renderEmployeeContent(employees) {
   return employees.length === 0 ? <p>{NO_EMPLOYEES_MESSAGE}</p> : <EmployeeTable employees={employees}/>;
@@ -10,8 +11,8 @@ function renderEmployeeContent(employees) {
 
 export default function EmployeeList({employees}) {
   return (
-      <div className="employee-list">
-        <h1>Current Employees</h1>
+      <div className="employee-list-container">
+        <h1 className="title">Current Employees</h1>
         {renderEmployeeContent(employees)}
         <Link to="/">Back</Link>
       </div>

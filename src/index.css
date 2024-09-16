@@ -30,7 +30,7 @@ body {
   height: 100vh;
 }
 
-/* General Form Styles */
+/* General Form CSS */
 form {
   display: flex;
   flex-direction: column;
@@ -167,7 +167,26 @@ button[type="submit"]:focus {
   background-color: #f9f9f9;
 }
 
-/* CSS Modal */
+/* Employee Table CSS*/
+
+.employee-list-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.data-table-parent{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.data-table-parent > input{
+  margin-top: 32px;
+}
+
+/* Modal CSS */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -178,6 +197,7 @@ button[type="submit"]:focus {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 2;
 }
 
 .modal-content {

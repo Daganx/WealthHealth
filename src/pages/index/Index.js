@@ -4,7 +4,7 @@ import Form from '../../components/form/Form';
 
 function TitleSection() {
   return (
-      <section className="title-container pacifico-regular">
+      <section className="title-container">
         <h1 className="title">HRnet</h1>
       </section>
   );
