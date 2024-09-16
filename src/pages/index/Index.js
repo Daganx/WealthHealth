@@ -13,7 +13,7 @@ function TitleSection() {
 function ViewEmployeeLink() {
   return (
       <Link className="link-employee" to="/employee">
-        View Employee
+        VIEW EMPLOYEE
       </Link>
   );
 }

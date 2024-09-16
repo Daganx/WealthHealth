@@ -17,7 +17,6 @@
   font-style: normal;
 }
 
-
 body {
   margin: 0;
   font-family: "Suse";
@@ -26,7 +25,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #dbdbd6;
+  background-image: url("./assets/images/background.svg");
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 
 /* General Form Styles */
@@ -84,7 +85,7 @@ button[type="submit"] {
   padding: 0.75em;
   font-size: 1em;
   color: #fff;
-  background-color: #007bff;
+  background-color: #5A6F09;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -104,6 +105,7 @@ button[type="submit"]:focus {
   align-items: center;
   justify-content: center;
   font-size: 2rem;
+  color: white;
 }
 
 .link-employee {
@@ -111,7 +113,10 @@ button[type="submit"]:focus {
   align-items: center;
   justify-content: center;
   margin-top: 32px;
+  margin-bottom: 32px;
   text-decoration: underline;
+  color: white;
+  font-weight: bold;
 }
 
 .link-employee:hover {
