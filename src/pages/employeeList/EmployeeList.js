@@ -3,7 +3,6 @@ import EmployeeTable from "../../components/employeeTable/EmployeeTable";
 import {Link} from "react-router-dom";
 
 const NO_EMPLOYEES_MESSAGE = "No employees added yet.";
-const EMPLOYEE_LIST_CLASS_NAME = "employee-list-container"
 
 function renderEmployeeContent(employees) {
   return employees.length === 0 ? <p>{NO_EMPLOYEES_MESSAGE}</p> : <EmployeeTable employees={employees}/>;

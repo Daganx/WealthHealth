@@ -25,9 +25,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url("./assets/images/background.svg");
+  background-image: url("./assets/images/background.webp");
   background-repeat: no-repeat;
   height: 100vh;
+  background-size: cover;
 }
 
 /* General Form CSS */
@@ -169,20 +170,21 @@ button[type="submit"]:focus {
 
 /* Employee Table CSS*/
 
-.employee-list-container{
+.employee-list-container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
-.data-table-parent{
+.data-table-parent {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-.data-table-parent > input{
+
+.data-table-parent > input {
   margin-top: 32px;
 }
 
