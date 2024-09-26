@@ -19,8 +19,8 @@ Avant de commencer, assurez-vous que vous avez installé les logiciels suivants 
 1. **Clonez le dépôt GitHub :**
 
    ```bash
-   git clone https://github.com/votre-utilisateur/hrnet-react.git
-   cd hrnet-react
+   git clone https://github.com/Daganx/WealthHealth.git
+   cd wealth-health
 
 ## Installation des dépendances
 
@@ -47,7 +47,7 @@ Chaque composant a été développé dans une optique modulaire pour garantir la
 Tests de Performance
 Pour garantir l'amélioration des performances après la conversion en React, des audits ont été effectués avec Lighthouse :
 
-Temps de chargement : Amélioré de XX% par rapport à l'ancienne version en jQuery.
+Temps de chargement : Amélioré de 10% par rapport à l'ancienne version en jQuery.
 Appels réseau : Réduction significative du nombre d'appels réseau grâce à une meilleure gestion de l'état.
 Performances générales : Score de performance passé de 89 (ancienne version) à 99 (nouvelle version React).
 
